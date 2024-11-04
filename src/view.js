@@ -15,8 +15,14 @@ async function moviesView(){
     moviesList.results.forEach(movie => {
         movieView.innerHTML +=`
         <div class="movieItem">
-        <img src="${movie.poster_path}">
-        <h2>${movie.original_title}</h2>
+            <img src="${movie.poster_path}">
+            <div class="content">
+                <h1 class="name">${movie.original_title}</h1>
+                <h3 class="info">
+                    <i></i> ${movie.vote_average} | ${movie.release_date}
+                </h3>
+                <p class="short-desc">${movie.overview}</p>
+            </div>
         </div>
         `
     });
