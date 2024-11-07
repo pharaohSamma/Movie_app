@@ -244,3 +244,14 @@ main p{
   line-height: 1.4;
   word-wrap: break-word;
 }
+
+#nxt-btn ,#prv-btn{
+  background: none;
+  border: none;
+}
+
+.pagination{
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 10px;
+}

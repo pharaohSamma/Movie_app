@@ -2,6 +2,7 @@ class Model{
 static instance;
 
 movieList = [];
+genreList = [];
 
 constructor(){
     if(Model.instance){
@@ -16,6 +17,14 @@ getMovieList(){
 
 setMovieList(){
     return this.movieList
+}
+
+getGenreList(){
+    return this.genreList
+}
+
+setGenreList(){
+    return this.genreList
 }
 }
 

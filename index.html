@@ -29,7 +29,7 @@
             </svg>
           </button>
         </li>
-        <li class="actibe">
+        <li class="active">
           <a href="index.html">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -102,10 +102,7 @@
             </svg>
           </button>
           <ul class="sub-menu">
-            <div>
-              <li><a href="#">Comedy</a></li>
-              <li><a href="#">Horror</a></li>
-              <li><a href="#">Action</a></li>
+            <div id="genreList">
             </div>
           </ul>
         </li>
@@ -164,6 +161,16 @@
     <main>  
       <div class="container">
         <div id="movieList"></div>
+        <div class="pagination">
+          <button id="prv-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M160-240H80v-480h80v480Zm320 0L240-480l240-240 56 56-143 144h487v80H393l144 144-57 56Z"/></svg>
+          </button>
+  
+          <button id="nxt-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M800-240v-480h80v480h-80Zm-320 0-57-56 144-144H80v-80h487L424-664l56-56 240 240-240 240Z"/></svg>
+          </button>
+        </div>
+        
       </div>
     </main>
   </body>
