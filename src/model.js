@@ -1,31 +1,31 @@
-class Model{
-static instance;
+class Model {
+  static instance;
 
-movieList = [];
-genreList = [];
+  movieList = [];
+  genreList = [];
 
-constructor(){
-    if(Model.instance){
-        return Model.instance
+  constructor() {
+    if (Model.instance) {
+      return Model.instance;
     }
     Model.instance = this;
+  }
+
+  getMovieList() {
+    return this.movieList;
+  }
+
+  setMovieList() {
+    return this.movieList;
+  }
+
+  getGenreList() {
+    return this.genreList;
+  }
+
+  setGenreList() {
+    return this.genreList;
+  }
 }
 
-getMovieList(){
-    return this.movieList
-}
-
-setMovieList(){
-    return this.movieList
-}
-
-getGenreList(){
-    return this.genreList
-}
-
-setGenreList(){
-    return this.genreList
-}
-}
-
-export{Model};
+export { Model };
