@@ -250,6 +250,7 @@ main p {
 #prv-btn {
   background: none;
   border: none;
+  cursor: pointer;
 }
 
 .pagination {
