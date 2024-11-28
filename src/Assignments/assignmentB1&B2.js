@@ -3,18 +3,17 @@
 const uniqueNumbers = new Array();
 const maxrange = 10;
 
-function checkUnique() {
+function getRandomUniqueInt() {
   return new Promise((resolve, reject) => {
     const randomInt = Math.round(Math.random() * 10);
     const randomTimeOut = Math.round(Math.random() * 2000) + 1000;
-
+    if(!uniqueNumbers.includes(randomInt)) {
+      uniqueNumbers.push(randomInt);
+    } else {
+      reject(`${randomInt} not unique`);
+    }
     setTimeout(() => {
-      if (!uniqueNumbers.includes(randomInt)) {
-        uniqueNumbers.push(randomInt);
-        resolve(randomInt);
-      } else {
-        reject(`${randomInt} not unique`);
-      }
+      resolve(randomInt);
     }, randomTimeOut);
   });
 }
@@ -33,9 +32,7 @@ function checkUnique() {
 //assignment B2
 //Array of promises
 const promiseArrayLenghth = 5;
-const promiseList = Array.from({ length: promiseArrayLenghth }, () =>
-  checkUnique()
-);
+const promiseList = Array.from({ length: promiseArrayLenghth }, getRandomUniqueInt);
 
 const resolvePromisesSeq = async (promises) =>{
   const results = [];
